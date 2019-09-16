@@ -1,0 +1,22 @@
+.gear-icons {
+  display: flex;
+}
+
+.left-gear {
+  flex-direction: column;
+  width: 64px;
+}
+
+.right-gear {
+  flex-direction: column;
+  width: 64px;
+}
+
+.bottom-gear {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: row;
+  height: 64px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
