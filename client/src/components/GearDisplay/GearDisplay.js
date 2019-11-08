@@ -22,16 +22,9 @@ const GearDisplay = () => {
   const [selectedClass, updateClass] = useState(null)
   const [example, setExample] = useState(null)
   // let radioGrab = document.querySelector('input[name="class":checked').value
-  
-  // console.log(radioGrab)
-  // console.log(selectedClass
-  // console.log(classWork.selectedClass)
-  // useEffect(() => {
-  //   console.log(selectedClass)
-  // })
 
   if(selectedClass) {
-    console.log(classWork[selectedClass].head)
+    console.log(classWork[selectedClass].protection.head)
   }
 
 
