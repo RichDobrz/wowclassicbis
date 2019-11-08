@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./GearDisplay.css"
+import classWork from "../../wowhead/classData"
 import head from "../../images/UIheadslot.png"
 import neck from "../../images/UIneckslot.png"
 import shoulder from "../../images/UIshoulderslot.png"
@@ -20,12 +21,24 @@ import offhand from "../../images/UIoffhandslot.png"
 const GearDisplay = () => {
   const [selectedClass, updateClass] = useState(null)
   const [example, setExample] = useState(null)
+  // let radioGrab = document.querySelector('input[name="class":checked').value
+  
+  // console.log(radioGrab)
+  // console.log(selectedClass
+  // console.log(classWork.selectedClass)
+  // useEffect(() => {
+  //   console.log(selectedClass)
+  // })
+
+  if(selectedClass) {
+    console.log(classWork[selectedClass].head)
+  }
 
 
   return(
     <div className="main-wrapper">
-      <button onClick={()=> updateClass("Warrior")}>Class</button>
-      <button onClick={() => setExample("Success")}>example</button>
+      {/* <button onClick={()=> updateClass("Warrior")}>Class</button> */}
+      <button onClick={() => updateClass("Warrior")}>example</button>
       
       <div className="gear-icons">
 

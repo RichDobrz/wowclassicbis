@@ -1,6 +1,9 @@
-import  React from "react";
+import  React, { useState } from "react";
+import classWork from "../../wowhead/classData"
 
 const Selection = () => {
+  // const [selectedClass, updateClass] = useState(null)
+
   return(
     <div>
       <section>
@@ -29,16 +32,27 @@ const Selection = () => {
             <input type="radio" value="Phase 6" name="phase"></input>
           </label>
         </section>
-        <section className="Class-selection">
-          <label>
-            Rogue
-            <input type="radio" value="Rogue" name="class"></input>
-          </label>
-          <label>
-            Druid
-            <input type="radio" value="Druid" name="class"></input>
-          </label>
-        </section>
+        <form name="myClass">
+          <label>Warrior</label>
+          <input type="radio" label="Warrior" value="Warrior" name="class"/>
+          <label>Druid</label>
+          <input type="radio" label="Druid" value="Druid" name="class"/>
+        </form>
+        {/* onChange={()=> updateClass("Druid")} */}
+        {/* onChange={()=> updateClass("Warrior")}  */}
+        
+        {/* <form name="formOne">
+          <section className="Class-selection">
+            <label>
+              Warrior
+              <input type="radio" value="Warrior" name="class"></input>
+            </label>
+            <label>
+              Druid
+              <input type="radio" value="Druid" name=""></input>
+            </label>
+          </section>
+        </form> */}
       </div>
   )
 }
