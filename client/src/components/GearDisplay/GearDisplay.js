@@ -34,6 +34,13 @@ const GearDisplay = () => {
     }
   })
 
+  // <label>{classWork.Warrior.options[0]}</label>
+  // <input type="radio" label={classWork.Warrior.options[0]} name="spec" value={classWork.Warrior.options[0]} onChange={() => setSpec(document.mySpec.spec.value)}></input>
+  // <label>{classWork.Warrior.options[1]}</label>
+  // <input type="radio" label={classWork.Warrior.options[1]} name="spec" value={classWork.Warrior.options[1]} onChange={() => setSpec(document.mySpec.spec.value)}></input>
+  // <label>{classWork.Warrior.options[1]}</label>
+  // <input type="radio" label={classWork.Warrior.options[2]} name="spec" value={classWork.Warrior.options[2]} onChange={() => setSpec(document.mySpec.spec.value)}></input>
+
 
   return(
     <div>
@@ -79,17 +86,21 @@ const GearDisplay = () => {
             <input type="radio" label="Warrior" value="Warrior" name="class" onChange={()=> setClass(document.myClass.class.value)} />
         </form>
       </section>
-      <section>
-        <form name="mySpec">
-          <label>{classWork.Warrior.options[0]}</label>
-          <input type="radio" label={classWork.Warrior.options[0]} name="spec" value={classWork.Warrior.options[0]} onChange={() => setSpec(document.mySpec.spec.value)}></input>
-          <label>{classWork.Warrior.options[1]}</label>
-          <input type="radio" label={classWork.Warrior.options[1]} name="spec" value={classWork.Warrior.options[1]} onChange={() => setSpec(document.mySpec.spec.value)}></input>
-          <label>{classWork.Warrior.options[1]}</label>
-          <input type="radio" label={classWork.Warrior.options[2]} name="spec" value={classWork.Warrior.options[2]} onChange={() => setSpec(document.mySpec.spec.value)}></input>
+        {chosenClass && classWork.Warrior.options ? 
+          <section>
+          <form name="mySpec">
+            {classWork.Warrior.options.map((x) => {
+              return (
+              <React.Fragment>
+              <label>{x}</label>
+              <input type="radio" label={x} value={x} onChange={() => setSpec(x)}/>
+              </React.Fragment>
+              )
+            })}
+          </form>
+        </section> : <section></section>
 
-        </form>
-      </section>
+        }
       </div>
 
 
