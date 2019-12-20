@@ -3,7 +3,10 @@ const classWork = {
     Warrior:{
         options: ["fury", "arms", "protection"], 
         fury: {
-            head: "item=12640",
+            head: {
+                link: "item=12640",
+                img: "[icondb=133138]"
+            },
             neck: "item=15411",
             shoulder: "item=12927",
             back: "item=13340",

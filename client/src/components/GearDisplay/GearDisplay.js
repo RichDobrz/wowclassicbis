@@ -16,6 +16,14 @@ import trinket from "../../images/UItrinketslot.png"
 import mainhand from "../../images/UImainhandslot.png"
 import offhand from "../../images/UIoffhandslot.png"
 
+{/* <img src={head}></img>
+<img src={neck}></img> 
+<img src={shoulder}></img>
+<img src={back}></img>
+ <img src={chest}></img>
+ <img src={wrist}></img>
+ */}
+
 
 
 const GearDisplay = () => {
@@ -33,6 +41,7 @@ const GearDisplay = () => {
       console.log(classWork[chosenClass].fury)
     }
   })
+
 
   // <label>{classWork.Warrior.options[0]}</label>
   // <input type="radio" label={classWork.Warrior.options[0]} name="spec" value={classWork.Warrior.options[0]} onChange={() => setSpec(document.mySpec.spec.value)}></input>
@@ -89,11 +98,11 @@ const GearDisplay = () => {
         {chosenClass && classWork.Warrior.options ? 
           <section>
           <form name="mySpec">
-            {classWork.Warrior.options.map((x) => {
+            {classWork.Warrior.options.map((specOptions) => {
               return (
               <React.Fragment>
-              <label>{x}</label>
-              <input type="radio" label={x} value={x} onChange={() => setSpec(x)}/>
+              <label>{specOptions}</label>
+              <input type="radio" label={specOptions} value={specOptions} onChange={() => setSpec(specOptions)}/>
               </React.Fragment>
               )
             })}
@@ -111,14 +120,39 @@ const GearDisplay = () => {
           {/* This is the left side section of the character/gear screen */}
 
           <div className="left-gear">
-            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.head : "" }> <img src={head}></img> </a> 
-            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.neck : "" }> <img src={neck}></img> </a> 
-            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.shoulder : "" }> <img src={shoulder}></img> </a> 
-            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.back : "" }> <img src={back}></img> </a> 
-            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.chest : "" }> <img src={chest}></img> </a> 
-            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.wrist : "" }> <img src={wrist}></img> </a> 
-          </div>
+            <a href="#" className="headLink" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.head.link : "" }>
+              {
+                chosenPhase && chosenClass ? 
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_36.jpg"></img> :
+                <img src={head}></img>
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.neck : "" }>
+              {
 
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.shoulder : "" }> 
+              {
+
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.back : "" }>
+              {
+
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.chest : "" }>
+              {
+
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.wrist : "" }>
+              {
+                
+              }
+            </a> 
+          </div>
           {/* This is the bottom section of the character/gear screen */}
 
           <div className="bottom-gear">
