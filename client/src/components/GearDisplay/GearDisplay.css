@@ -1,3 +1,7 @@
+body {
+  background: gray;
+}
+
 .gear-icons {
   display: flex;
 }
@@ -6,6 +10,12 @@
   /* width: 64px;
   height: 64px; */
   /* background-image: url(https://wow.zamimg.com/images/wow/icons/large/inv_helmet_36.jpg); */
+}
+
+.coloredBG {
+  border: 2px solid purple;
+  border-radius: 6px;
+  background: grey;
 }
 
 .left-gear {

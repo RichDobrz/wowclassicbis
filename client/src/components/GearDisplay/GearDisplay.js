@@ -16,13 +16,6 @@ import trinket from "../../images/UItrinketslot.png"
 import mainhand from "../../images/UImainhandslot.png"
 import offhand from "../../images/UIoffhandslot.png"
 
-{/* <img src={head}></img>
-<img src={neck}></img> 
-<img src={shoulder}></img>
-<img src={back}></img>
- <img src={chest}></img>
- <img src={wrist}></img>
- */}
 
 
 
@@ -95,19 +88,21 @@ const GearDisplay = () => {
             <input type="radio" label="Warrior" value="Warrior" name="class" onChange={()=> setClass(document.myClass.class.value)} />
         </form>
       </section>
-        {chosenClass && classWork.Warrior.options ? 
+        
+        {
+          chosenClass && classWork.Warrior.options ? 
           <section>
-          <form name="mySpec">
-            {classWork.Warrior.options.map((specOptions) => {
-              return (
-              <React.Fragment>
-              <label>{specOptions}</label>
-              <input type="radio" label={specOptions} value={specOptions} onChange={() => setSpec(specOptions)}/>
-              </React.Fragment>
-              )
-            })}
-          </form>
-        </section> : <section></section>
+            <form name="mySpec">
+              {classWork.Warrior.options.map((specOptions) => {
+                return (
+                <React.Fragment>
+                <label>{specOptions}</label>
+                <input type="radio" label={specOptions} value={specOptions} onChange={() => setSpec(specOptions)}/>
+                </React.Fragment>
+                )
+              })}
+            </form>
+          </section> : <section></section>
 
         }
       </div>
@@ -123,54 +118,124 @@ const GearDisplay = () => {
             <a href="#" className="headLink" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.head.link : "" }>
               {
                 chosenPhase && chosenClass ? 
-                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_36.jpg"></img> :
+                <img className="coloredBG" src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_36.jpg"></img> :
                 <img src={head}></img>
               }
             </a> 
             <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.neck : "" }>
               {
-
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_07.jpg"></img> :
+                <img src={neck}></img>
               }
             </a> 
             <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.shoulder : "" }> 
               {
-
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_10.jpg"></img> :
+                <img src={shoulder}></img>
               }
             </a> 
             <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.back : "" }>
               {
-
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_20.jpg"></img> :
+                <img src={back}></img>
               }
             </a> 
             <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.chest : "" }>
               {
-
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain_15.jpg"></img> :
+                <img src={chest}></img>
               }
             </a> 
             <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.wrist : "" }>
               {
-                
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_bracer_17.jpg"></img> :
+                <img src={wrist}></img>
               }
             </a> 
           </div>
           {/* This is the bottom section of the character/gear screen */}
 
           <div className="bottom-gear">
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.mainhand : "" }> <img src={mainhand}></img> </a> 
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.offhand : "" }> <img src={offhand}></img> </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.mainhand : "" }>
+              {
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/spell_frost_frostbrand.jpg"></img> :
+                <img src={mainhand}></img>
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.offhand : "" }> 
+              {
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_34.jpg"></img> :
+                <img src={offhand}></img>
+              }
+            </a> 
           </div>
           
           {/* This is right side section of the character/gear screen */}
 
           <div className="right-gear">
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.hands : "" }> <img src={glove}></img> </a> 
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.waist : "" }> <img src={waist}></img> </a> 
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.legs : "" }> <img src={legs}></img> </a> 
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.boots : "" }> <img src={boots}></img> </a> 
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.ring1 : "" }> <img src={finger}></img> </a> 
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.ring2 : "" }> <img src={finger}></img> </a> 
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.trinket1 : "" }> <img src={trinket}></img> </a> 
-          <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.trinket2 : "" }> <img src={trinket}></img> </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.hands : "" }>
+              {
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_26.jpg"></img> :
+                <img src={glove}></img>
+              } 
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.waist : "" }>
+              {
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_belt_33.jpg"></img> :
+                <img src={waist}></img>
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.legs : "" }>
+             {
+               chosenPhase && chosenClass ?
+               <img src="https://wow.zamimg.com/images/wow/icons/large/inv_pants_wolf.jpg"></img> :
+               <img src={legs}></img>
+             }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.boots : "" }>
+              {
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg"></img> :
+                <img src={boots}></img>
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.ring1 : "" }>
+              {
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg"></img> :
+                <img src={finger}></img>
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.ring2 : "" }>
+              {
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_13.jpg"></img> :
+                <img src={finger}></img>
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.trinket1 : "" }>
+              {
+                chosenPhase && chosenClass ?
+                <img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_01.jpg"></img> :
+                <img src={trinket}></img>
+              }
+            </a> 
+            <a href="#" data-wowhead={ chosenPhase && chosenClass ? classWork.Warrior.fury.trinket2 : "" }>
+              {
+                chosenPhase && chosenClass ?
+                <img  className="coloredBG" src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_armorkit_09.jpg"></img> :
+                <img src={trinket}></img>
+              }
+            </a> 
 
           </div>
         </div>
