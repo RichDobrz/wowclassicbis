@@ -1,31 +1,182 @@
 const classWork = {
     
     Warrior:{
-        options: ["fury", "arms", "protection"], 
+        options: ["fury", "protection"], 
         fury: {
             head: {
                 link: "item=12640",
-                img: "[icondb=133138]"
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_36.jpg",
+                quality: ""
             },
-            neck: "item=15411",
-            shoulder: "item=12927",
-            back: "item=13340",
-            chest: "item=11726",
-            wrist: "item=12936",
-            hands: "item=15063",
-            waist: "item=13142",
-            legs: "item=15062",
-            feet: "item=14616",
-            ring1: "item=17713",
-            ring2: "item=18500",
-            trinket1: "item=11815",
-            trinket2: "item=13965",
-            mainhand: "item=11684",
-            offhand: "item=15806",
-            range: "item=18323"
+            neck:{
+                link: "item=15411",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_07.jpg",
+                quality: "",
+            },
+            shoulder: {
+                link: "item=12927",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_10.jpg",
+                quality: ""
+            },
+            back: {
+                link:  "item=13340",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_20.jpg",
+                quality: ""
+            },
+            chest: {
+                link: "item=11726",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain_15.jpg",
+                quality: ""
+            },
+            wrist: {
+                link:  "item=12936",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_bracer_17.jpg",
+                quality: ""
+            },
+            hands: {
+                link: "item=15063",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_26.jpg",
+                quality: ""
+            },
+            waist: {
+                link: "item=13142",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_belt_33.jpg",
+                quality: ""
+            },
+            legs: {
+                link: "item=15062",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_pants_wolf.jpg",
+                quality: ""
+            },
+            feet: {
+                link: "item=14616",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg",
+                quality: ""
+            },
+            ring1: {
+                link: "item=17713",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg",
+                quality: ""
+            },
+            ring2: {
+                link: "item=18500",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_13.jpg",
+                quality: ""
+            },
+            trinket1: {
+                link: "item=11815",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_01.jpg",
+                quality: ""
+            },
+            trinket2: {
+                link: "item=13965",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_armorkit_09.jpg",
+                quality: ""
+            },
+            mainhand: {
+                link: "item=11684",
+                img: "https://wow.zamimg.com/images/wow/icons/large/spell_frost_frostbrand.jpg",
+                quality: ""
+            },
+            offhand: {
+                link: "item=15806",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_sword_34.jpg",
+                quality: ""
+            },
+            range: {
+                link: "item=18323",
+                img: "",
+                quality: ""
+            }
         },
         protection: {
-            head: "item"
+            head: {
+                link: "item=12640",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_36.jpg",
+                quality: ""
+            },
+            neck: {
+                link: "item=13091",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_08.jpg",
+                quality: ""
+            },
+            shoulder: {
+                link: "item=16733",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_30.jpg",
+                quality: ""
+            },
+            back: {
+                link: "item=13397",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_19.jpg",
+                quality: ""
+            },
+            chest: {
+                link: "item=11726",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain_15.jpg",
+                quality: ""
+            },
+            wrist: {
+                link: "item=16735",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_bracer_18.jpg",
+                quality: ""
+            },
+            hands: {
+                link: "item=14525",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_29.jpg",
+                quality: ""
+            },
+            waist: {
+                link: "item=13142",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_belt_33.jpg",
+                quality: ""
+            },
+            legs: {
+                link: "item=14554",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_pants_04.jpg",
+                quality: ""
+            },
+            feet: {
+                link: "item=14616",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_boots_01.jpg",
+                quality: ""
+            },
+            ring1: {
+                link: "item=2246",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_05.jpg",
+                quality: ""
+            },
+            ring2: {
+                link: "item=17713",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_17.jpg",
+                quality: ""
+            },
+            trinket1: {
+                link: "item=11815",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_01.jpg",
+                quality: ""
+            },
+            trinket2: {
+                link: "item=17774",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_08.jpg",
+                quality: ""
+            },
+            mainhand: {
+                link: "item=15806",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_sword_34.jpg",
+                quality: ""
+            },
+            offhand: {
+                link: "item=12602",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_shield_20.jpg",
+                quality: ""
+            },
+            range: {
+                link: "item=12651",
+                img: "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_crossbow_04.jpg",
+                quality: ""
+            }
+        
+            
         }
     },
     
