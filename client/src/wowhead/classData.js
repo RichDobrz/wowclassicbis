@@ -3,9 +3,6 @@ const classWork = {
   Warrior:{
     options: ["fury", "protection"], 
     
-
-
-
     Phase1: {
       fury: {    
         head: {
@@ -1093,17 +1090,92 @@ const classWork = {
 
   Druid: {
     options: ["balance", "tank", "feral", "resto"],
-    balance: {
+    phase1: {
+      balance: {
         head: "item"
     },
-    feral: {
+      feral: {
+        head: "item"
+      },
+      tank: {
+        head: "item"
+      },
+      resto: {
+        head: "item"
+      }
+    },
+    Phase2: {
+      balance: {
+        head: "item"
+      },
+      feral: {
+        head: "item"
+      },
+      tank: {
+        head: "item"
+      },
+      resto: {
+        head: "item"
+      }
+    },
+    
+    Phase3: {
+      balance: {
         head: "item"
     },
-    tank: {
+      feral: {
+        head: "item"
+      },
+      tank: {
+        head: "item"
+      },
+      resto: {
+        head: "item"
+      }
+    },
+    
+    Phase4: {
+      balance: {
         head: "item"
     },
-    resto: {
+      feral: {
         head: "item"
+      },
+      tank: {
+        head: "item"
+      },
+      resto: {
+        head: "item"
+      }
+    },
+    
+    Phase5: {
+      balance: {
+        head: "item"
+    },
+      feral: {
+        head: "item"
+      },
+      tank: {
+        head: "item"
+      },
+      resto: {
+        head: "item"
+      }
+    },
+    Phase6: {
+      balance: {
+        head: "item"
+    },
+      feral: {
+        head: "item"
+      },
+      tank: {
+        head: "item"
+      },
+      resto: {
+        head: "item"
+      }
     }
   },
 
