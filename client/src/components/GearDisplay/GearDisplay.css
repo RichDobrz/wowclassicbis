@@ -1,9 +1,10 @@
 body {
-  background: gray;
+  background: #313639;
 }
 
 .gear-icons {
   display: flex;
+  justify-content: center;
 }
 
 /* .headLink {
@@ -11,6 +12,9 @@ body {
   height: 64px;
   background-image: url(https://wow.zamimg.com/images/wow/icons/large/inv_helmet_36.jpg);
 } */
+.mainContainer {
+
+}
 
 .coloredBG {
   border: 2px solid purple;

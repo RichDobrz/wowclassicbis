@@ -1,10 +1,11 @@
 import React, { Component } from "react"
+import "./Header.css"
  
  const Header = () => {
   return (
     <header className="App-header">
-    <p>Classic BIS List</p>
-    <a href="#" data-wowhead="item=2828"></a>
+    <p className="appHeader">Classic BIS List</p>
+    
   </header>
   )
  }

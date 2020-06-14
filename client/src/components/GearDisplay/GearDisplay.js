@@ -23,25 +23,18 @@ const GearDisplay = () => {
   const [chosenClass, setClass] = useState(null)
   const [chosenPhase, setPhase] = useState(null)
   const [chosenSpec, setSpec] = useState(null)
+
   // let radioGrab = document.querySelector('input[name="class":checked').value
 
   const completeCheck = chosenPhase && chosenClass && chosenSpec
+  const doesClassWork = chosenPhase && chosenClass && chosenSpec
 
   useEffect(() => {
-    console.log(chosenPhase, "chosenPhase")
-    console.log(chosenClass, "chosenClass")
-    console.log(chosenSpec, "chosenSpec")
-    console.log(classWork.Warrior.options.length)
-    if (chosenClass && chosenPhase && chosenSpec) {
-      console.log(classWork[chosenClass][chosenPhase][chosenSpec].head.link)
+    if(chosenSpec) {
+      setSpec(null)
     }
 
-    if (chosenClass !== "Warrior") {
-
-    }
-  })
-
-  const doesClassWork = chosenPhase && chosenClass && chosenSpec
+  }, [chosenClass])
 
 
   return (
@@ -74,41 +67,42 @@ const GearDisplay = () => {
         <section>
           <form name="myClass" className="radio-toolbar">
 
-            <input id="druidRadio" type="radio" label="Druid" value="Druid" name="class" onChange={() => setClass(document.myClass.class.value)} />
+            <input id="druidRadio" type="radio" label="Druid" value="Druid" name="class" onChange={
+              () => {setClass(document.myClass.class.value); setSpec(null)} }/>
             <label htmlFor="druidRadio">Druid</label>
 
-            <input id="hunterRadio" type="radio" label="Hunter" value="Hunter" name="class" onChange={() => setClass(document.myClass.class.value)} />
+            <input id="hunterRadio" type="radio" label="Hunter" value="Hunter" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)}}/>
             <label htmlFor="hunterRadio">Hunter</label>
 
-            <input id="mageRadio" type="radio" label="Mage" value="Mage" name="class" onChange={() => setClass(document.myClass.class.value)} />
+            <input id="mageRadio" type="radio" label="Mage" value="Mage" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} }/>
             <label htmlFor="mageRadio">Mage</label>
 
-            <input id="paladinRadio" type="radio" label="Paladin" value="Paladin" name="class" onChange={() => setClass(document.myClass.class.value)} />
+            <input id="paladinRadio" type="radio" label="Paladin" value="Paladin" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} }/>
             <label htmlFor="paladinRadio">Paladin</label>
 
-            <input id="priestRadio" type="radio" label="Priest" value="Priest" name="class" onChange={() => setClass(document.myClass.class.value)} />
+            <input id="priestRadio" type="radio" label="Priest" value="Priest" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
             <label htmlFor="priestRadio">Priest</label>
 
-            <input id="rogueRadio" type="radio" label="Rogue" value="Rogue" name="class" onChange={() => setClass(document.myClass.class.value)} />
+            <input id="rogueRadio" type="radio" label="Rogue" value="Rogue" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
             <label htmlFor="rogueRadio">Rogue</label>
 
-            <input id="shamanRadio" type="radio" label="Shaman" value="Shaman" name="class" onChange={() => setClass(document.myClass.class.value)} />
+            <input id="shamanRadio" type="radio" label="Shaman" value="Shaman" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
             <label htmlFor="shamanRadio">Shaman</label>
 
-            <input id="warlockRadio" type="radio" label="Warlock" value="Warlock" name="class" onChange={() => setClass(document.myClass.class.value)} />
+            <input id="warlockRadio" type="radio" label="Warlock" value="Warlock" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
             <label htmlFor="warlockRadio">Warlock</label>
 
-            <input id="warriorRadio" type="radio" label="Warrior" value="Warrior" name="class" onChange={() => setClass(document.myClass.class.value)} />
+            <input id="warriorRadio" type="radio" label="Warrior" value="Warrior" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
             <label htmlFor="warriorRadio">Warrior</label>
           </form>
         </section>
 
         {/* This will list all available specs for the chosen class (chosenClass). User selects the class to use for display purposes */}
         {
-          chosenClass && classWork.Warrior.options ?
+          chosenClass && classWork[chosenClass].options ?
             <section>
               <form name="mySpec" className="radio-toolbar">
-                {classWork.Warrior.options.map((specOptions) => {
+                {classWork[chosenClass].options.map((specOptions) => {
                   return (
                     <React.Fragment key={specOptions}>
                       <input name="mySpec" id={specOptions} type="radio" label={specOptions} value={specOptions} onChange={() => setSpec(specOptions)} />

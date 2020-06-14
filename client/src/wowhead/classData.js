@@ -1085,7 +1085,7 @@ const classWork = {
   //@Druid This is where Druid BIS list data starts
   Druid: {
     options: ["balance", "tank", "feral", "resto"],
-    phase1: {
+    Phase1: {
       balance: {
         head: "item"
       },
@@ -2544,7 +2544,7 @@ const classWork = {
   //@Rogue
   Rogue: {
     options: ["sword", "dagger"],
-    phase1: {
+    Phase1: {
       sword: {
         head: {
           link: "item=16908",
@@ -2720,7 +2720,7 @@ const classWork = {
         }
       }
     },
-    phase2: {
+    Phase2: {
       sword: {
         head: {
           link: "item=16908",
@@ -2896,7 +2896,7 @@ const classWork = {
         }
       }
     },
-    phase3: {
+    Phase3: {
       sword: {
         head: {
           link: "item=16908",
@@ -3072,7 +3072,7 @@ const classWork = {
         }
       }
     },
-    phase4: {
+    Phase4: {
       sword: {
         head: {
           link: "item=16908",
@@ -3248,7 +3248,7 @@ const classWork = {
         }
       }
     },
-    phase5: {
+    Phase5: {
       sword: {
         head: {
           link: "item=21360",
@@ -3424,7 +3424,7 @@ const classWork = {
         }
       }
     },
-    phase6: {
+    Phase6: {
       sword: {
         head: {
           link: "item=22478",
@@ -3604,7 +3604,7 @@ const classWork = {
 
   Shaman: {
     options: ["elemental", "enchance", "resto"],
-    phase1: {
+    Phase1: {
       elemental: {
         head: {
           link: "item=10504",
@@ -3852,7 +3852,7 @@ const classWork = {
         }
       }
     },
-    phase2: {
+    Phase2: {
       elemental: {
         head: {
           link: "item=10504",
@@ -4100,7 +4100,7 @@ const classWork = {
         }
       }
     },
-    phase3: {
+    Phase3: {
       elemental: {
         head: {
           link: "item=19375",
@@ -4348,7 +4348,7 @@ const classWork = {
         }
       }
     },
-    phase4: {
+    Phase4: {
       elemental: {
         head: {
           link: "item=19375",
@@ -4596,7 +4596,7 @@ const classWork = {
         }
       }
     },
-    phase5: {
+    Phase5: {
       elemental: {
         head: {
           link: "item=19375",
@@ -4844,7 +4844,7 @@ const classWork = {
         }
       }
     },
-    phase6: {
+    Phase6: {
       elemental: {
         head: {
           link: "item=19375",
@@ -5096,7 +5096,7 @@ const classWork = {
 
   Hunter: {
     options: ["marksman"],
-    phase1: {
+    Phase1: {
       marksman: {
         head: {
           link: "item=18421",
@@ -5180,7 +5180,7 @@ const classWork = {
         }
       }
     },
-    phase2: {
+    Phase2: {
       marksman: {
         head: {
           link: "item=16846",
@@ -5269,7 +5269,7 @@ const classWork = {
         }
       }
     },
-    phase3: {
+    Phase3: {
       marksman: {
         head: {
           link: "item=16939",
@@ -5358,7 +5358,7 @@ const classWork = {
         }
       }
     },
-    phase4: {
+    Phase4: {
       marksman: {
         head: {
           link: "item=16939",
@@ -5447,7 +5447,7 @@ const classWork = {
         }
       }
     },
-    phase5: {
+    Phase5: {
       marksman: {
         head: {
           link: "item=16939",
@@ -5536,7 +5536,7 @@ const classWork = {
         }
       }
     },
-    phase6: {
+    Phase6: {
       marksman: {
         head: {
           link: "item=22438",
@@ -5629,7 +5629,7 @@ const classWork = {
 
   Priest: {
     options: ["shadow", "holy"],
-    phase1: {
+    Phase1: {
       shadow: {
         head: {
           link: "item=10504",
@@ -5805,7 +5805,7 @@ const classWork = {
         }
       }
     },
-    phase2: {
+    Phase2: {
       shadow: {
         head: {
           link: "item=10504",
@@ -5976,7 +5976,7 @@ const classWork = {
         }
       }
     },
-    phase3: {
+    Phase3: {
       shadow: {
         head: {
           link: "item=19375",
@@ -6152,7 +6152,7 @@ const classWork = {
         }
       }
     },
-    phase4: {
+    Phase4: {
       shadow: {
         head: {
           link: "item=19886",
@@ -6328,7 +6328,7 @@ const classWork = {
         }
       }
     },
-    phase5: {
+    Phase5: {
       shadow: {
         head: {
           link: "item=21348",
@@ -6504,7 +6504,7 @@ const classWork = {
         }
       }
     },
-    phase6: {
+    Phase6: {
       shadow: {
         head: {
           link: "item=23035",
@@ -6679,7 +6679,7 @@ const classWork = {
 
   Paladin: {
     options: ["holy", "protection", "retribution"],
-    phase1: {
+    Phase1: {
       holy: {
         head: {
           link: "item=18490",
@@ -6922,7 +6922,7 @@ const classWork = {
         },
       },
     },
-    phase2: {
+    Phase2: {
       holy: {
         head: {
           link: "item=18490",
@@ -7165,7 +7165,7 @@ const classWork = {
         },
       },
     },
-    phase3: {
+    Phase3: {
       holy: {
         head: {
           link: "item=19375",
@@ -7408,7 +7408,7 @@ const classWork = {
         },
       },
     },
-    phase4: {
+    Phase4: {
       holy: {
         head: {
           link: "item=19375]",
@@ -7651,7 +7651,7 @@ const classWork = {
         },
       },
     },
-    phase5: {
+    Phase5: {
       holy: {
         head: {
           link: "item=19375",
@@ -7894,7 +7894,7 @@ const classWork = {
         },
       },
     },
-    phase6: {
+    Phase6: {
       holy: {
         head: {
           link: "item=19375",
@@ -8141,7 +8141,7 @@ const classWork = {
 
   Mage: {
     options: ["frost"],
-    phase1: {
+    Phase1: {
       frost: {
         head: {
           link: "item=10250",
@@ -8230,7 +8230,7 @@ const classWork = {
         }
       }
     },
-    phase2: {
+    Phase2: {
       frost: {
         head: {
           link: "item=16795",
@@ -8319,7 +8319,7 @@ const classWork = {
         }
       },
     },
-    phase3: {
+    Phase3: {
       frost: {
         head: {
           link: "item=19375",
@@ -8403,7 +8403,7 @@ const classWork = {
         }
       }
     },
-    phase4: {
+    Phase4: {
       frost: {
         head: {
           link: "item=19375",
@@ -8487,7 +8487,7 @@ const classWork = {
         }
       }
     },
-    phase5: {
+    Phase5: {
       frost: {
         head: {
           link: "item=19375",
@@ -8576,7 +8576,7 @@ const classWork = {
         }
       }
     },
-    phase6: {
+    Phase6: {
       frost: {
         head: {
           link: "item=22498",
@@ -8669,7 +8669,7 @@ const classWork = {
 
   Warlock: {
     options: ["affliction"],
-    phase1: {
+    Phase1: {
       affliction: {
         head: {
           link: "item=10504",
@@ -8758,7 +8758,7 @@ const classWork = {
         }
       }
     },
-    phase2: {
+    Phase2: {
       affliction: {
         head: {
           link: "item=23310",
@@ -8848,7 +8848,7 @@ const classWork = {
 
       }
     },
-    phase3: {
+    Phase3: {
       affliction: {
         head: {
           link: "item=19375",
@@ -8937,7 +8937,7 @@ const classWork = {
         }
       }
     },
-    phase4: {
+    Phase4: {
       affliction: {
         head: {
           link: "item=19375",
@@ -9026,7 +9026,7 @@ const classWork = {
         }
       }
     },
-    phase5: {
+    Phase5: {
       affliction: {
         head: {
           link: "item=21337",
@@ -9115,7 +9115,7 @@ const classWork = {
         }
       }
     },
-    phase6: {
+    Phase6: {
       affliction: {
         head: {
           link: "item=22506",
