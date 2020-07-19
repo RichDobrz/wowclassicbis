@@ -2132,11 +2132,6 @@ const classWork = {
           link: "item=9449",
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_mace_14.jpg",
           quality: ""
-        },
-        offhand: {
-          link: "",
-          img: "",
-          quality: ""
         }
       },
       tank: {
@@ -3762,11 +3757,6 @@ const classWork = {
           link: "item=12784",
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_axe_09.jpg",
           quality: ""
-        },
-        offhand: {
-          link: "",
-          img: "",
-          quality: ""
         }
       },
       resto: {
@@ -4009,11 +3999,6 @@ const classWork = {
         mainhand: {
           link: "item=12784",
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_axe_09.jpg",
-          quality: ""
-        },
-        offhand: {
-          link: "",
-          img: "",
           quality: ""
         }
       },
@@ -4258,11 +4243,6 @@ const classWork = {
           link: "item=17104",
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_axe_09.jpg",
           quality: ""
-        },
-        offhand: {
-          link: "",
-          img: "",
-          quality: ""
         }
       },
       resto: {
@@ -4505,11 +4485,6 @@ const classWork = {
         mainhand: {
           link: "item=17104",
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_axe_09.jpg",
-          quality: ""
-        },
-        offhand: {
-          link: "",
-          img: "",
           quality: ""
         }
       },
@@ -5173,11 +5148,6 @@ const classWork = {
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_spear_07.jpg",
           quality: ""
         },
-        offhand: {
-          link: "",
-          img: "",
-          quality: ""
-        }
       }
     },
     Phase2: {
@@ -5793,11 +5763,6 @@ const classWork = {
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_staff_30.jpg",
           quality: ""
         },
-        offhand: {
-          link: "",
-          img: "",
-          quality: ""
-        },
         range: {
           link: "item=13938",
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bone_taurenskull_01.jpg",
@@ -5962,11 +5927,6 @@ const classWork = {
         mainhand: {
           link: "item=18608",
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_staff_30.jpg",
-          quality: ""
-        },
-        offhand: {
-          link: "",
-          img: "",
           quality: ""
         },
         range: {
@@ -8925,11 +8885,6 @@ const classWork = {
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_staff_06.jpg",
           quality: ""
         },
-        offhand: {
-          link: "",
-          img: "",
-          quality: ""
-        },
         range: {
           link: "item=13396",
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bone_elfskull_01.jpg",
@@ -9012,11 +8967,6 @@ const classWork = {
         mainhand: {
           link: "item=19356",
           img: "https://wow.zamimg.com/images/wow/icons/large/inv_staff_06.jpg",
-          quality: ""
-        },
-        offhand: {
-          link: "",
-          img: "",
           quality: ""
         },
         range: {
