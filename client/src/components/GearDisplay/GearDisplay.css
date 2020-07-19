@@ -12,10 +12,24 @@ body {
   height: 64px;
   background-image: url(https://wow.zamimg.com/images/wow/icons/large/inv_helmet_36.jpg);
 } */
-.mainContainer {
-
+.main-wrapper {
+  margin-top: 5%;
 }
 
+.phaseChooser {
+  display: flex;
+  justify-content: center;
+}
+
+.classChooser {
+  display: flex;
+  justify-content: center;
+}
+
+.specChooser {
+  display: flex;
+  justify-content: center;
+}
 .coloredBG {
   border: 2px solid purple;
   border-radius: 6px;

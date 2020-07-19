@@ -19,102 +19,11 @@ import blankOffhand from "../../images/UIoffhandslot.png"
 
 
 
-const GearDisplay = () => {
-  const [chosenClass, setClass] = useState(null)
-  const [chosenPhase, setPhase] = useState(null)
-  const [chosenSpec, setSpec] = useState(null)
-
-  // let radioGrab = document.querySelector('input[name="class":checked').value
-
-  const completeCheck = chosenPhase && chosenClass && chosenSpec
-  const doesClassWork = chosenPhase && chosenClass && chosenSpec
-
-  useEffect(() => {
-    if(chosenSpec) {
-      setSpec(null)
-    }
-
-  }, [chosenClass])
-
+const GearDisplay = (props) => {
+  const doesClassWork = props.chosenPhase && props.chosenClass && props.chosenSpec
 
   return (
     <div>
-      <div>
-
-        <section>
-
-          <form name="myPhase" className="radio-toolbar">
-            <input id="radioP1" type="radio" label="Phase 1" value="Phase1" onChange={() => setPhase(document.myPhase.phase.value)} name="phase" />
-            <label htmlFor="radioP1">Phase 1</label>
-
-            <input id="radioP2" type="radio" label="Phase 2" value="Phase2" onChange={() => setPhase(document.myPhase.phase.value)} name="phase" />
-            <label htmlFor="radioP2">Phase 2</label>
-
-            <input id="radioP3" type="radio" label="Phase 3" value="Phase3" onChange={() => setPhase(document.myPhase.phase.value)} name="phase" />
-            <label htmlFor="radioP3">Phase 3</label>
-
-            <input id="radioP4" type="radio" label="Phase 4" value="Phase4" onChange={() => setPhase(document.myPhase.phase.value)} name="phase" />
-            <label htmlFor="radioP4">Phase 4</label>
-
-            <input id="radioP5" type="radio" label="Phase 5" value="Phase5" onChange={() => setPhase(document.myPhase.phase.value)} name="phase" />
-            <label htmlFor="radioP5">Phase 5</label>
-
-            <input id="radioP6" type="radio" label="Phase 6" value="Phase6" onChange={() => setPhase(document.myPhase.phase.value)} name="phase" />
-            <label htmlFor="radioP6">Phase 6</label>
-          </form>
-
-        </section>
-        <section>
-          <form name="myClass" className="radio-toolbar">
-
-            <input id="druidRadio" type="radio" label="Druid" value="Druid" name="class" onChange={
-              () => {setClass(document.myClass.class.value); setSpec(null)} }/>
-            <label htmlFor="druidRadio">Druid</label>
-
-            <input id="hunterRadio" type="radio" label="Hunter" value="Hunter" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)}}/>
-            <label htmlFor="hunterRadio">Hunter</label>
-
-            <input id="mageRadio" type="radio" label="Mage" value="Mage" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} }/>
-            <label htmlFor="mageRadio">Mage</label>
-
-            <input id="paladinRadio" type="radio" label="Paladin" value="Paladin" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} }/>
-            <label htmlFor="paladinRadio">Paladin</label>
-
-            <input id="priestRadio" type="radio" label="Priest" value="Priest" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
-            <label htmlFor="priestRadio">Priest</label>
-
-            <input id="rogueRadio" type="radio" label="Rogue" value="Rogue" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
-            <label htmlFor="rogueRadio">Rogue</label>
-
-            <input id="shamanRadio" type="radio" label="Shaman" value="Shaman" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
-            <label htmlFor="shamanRadio">Shaman</label>
-
-            <input id="warlockRadio" type="radio" label="Warlock" value="Warlock" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
-            <label htmlFor="warlockRadio">Warlock</label>
-
-            <input id="warriorRadio" type="radio" label="Warrior" value="Warrior" name="class" onChange={() => {setClass(document.myClass.class.value); setSpec(null)} } />
-            <label htmlFor="warriorRadio">Warrior</label>
-          </form>
-        </section>
-
-        {/* This will list all available specs for the chosen class (chosenClass). User selects the class to use for display purposes */}
-        {
-          chosenClass && classWork[chosenClass].options ?
-            <section>
-              <form name="mySpec" className="radio-toolbar">
-                {classWork[chosenClass].options.map((specOptions) => {
-                  return (
-                    <React.Fragment key={specOptions}>
-                      <input name="mySpec" id={specOptions} type="radio" label={specOptions} value={specOptions} onChange={() => setSpec(specOptions)} />
-                      <label htmlFor={specOptions}>{specOptions}</label>
-                    </React.Fragment>
-                  )
-                })}
-              </form>
-            </section> : <section></section>
-
-        }
-      </div>
 
 
       <div className="main-wrapper">
@@ -125,50 +34,50 @@ const GearDisplay = () => {
 
           <div className="left-gear">
 
-            <a href="#" className="headLink" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].head.link : ""}>
+            <a href="#" className="headLink" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].head.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img className="coloredBG" src={classWork[chosenClass][chosenPhase][chosenSpec].head.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img className="coloredBG" src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].head.img}></img> :
                   <img src={blankHead}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].neck.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].neck.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].neck.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].neck.img}></img> :
                   <img src={blankNeck}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].shoulder.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].shoulder.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].shoulder.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].shoulder.img}></img> :
                   <img src={blankShoulder}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].back.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].back.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].back.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].back.img}></img> :
                   <img src={blankBack}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].chest.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].chest.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].chest.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].chest.img}></img> :
                   <img src={blankChest}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].wrist.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].wrist.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].wrist.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].wrist.img}></img> :
                   <img src={blankWrist}></img>
               }
             </a>
@@ -177,18 +86,18 @@ const GearDisplay = () => {
 
           <div className="bottom-gear">
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].mainhand.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].mainhand.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].mainhand.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].mainhand.img}></img> :
                   <img src={blankMainhand}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].offhand.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].offhand.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand.img}></img> :
                   <img src={blankOffhand}></img>
               }
             </a>
@@ -198,65 +107,65 @@ const GearDisplay = () => {
 
           <div className="right-gear">
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].hands.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].hands.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].hands.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].hands.img}></img> :
                   <img src={blankGlove}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].waist.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].waist.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].waist.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].waist.img}></img> :
                   <img src={blankWaist}></img>
               }
             </a>
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].legs.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].legs.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].legs.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].legs.img}></img> :
                   <img src={blankLegs}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].feet.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].feet.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].feet.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].feet.img}></img> :
                   <img src={blankBoots}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].ring1.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].ring1.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].ring1.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].ring1.img}></img> :
                   <img src={blankFinger}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].ring2.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].ring2.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].ring2.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].ring2.img}></img> :
                   <img src={blankFinger}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].trinket1.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].trinket1.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img src={classWork[chosenClass][chosenPhase][chosenSpec].trinket2.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].trinket2.img}></img> :
                   <img src={blankTrinket}></img>
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[chosenClass][chosenPhase][chosenSpec].trinket2.link : ""}>
+            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].trinket2.link : ""}>
               {
-                chosenPhase && chosenClass && chosenSpec ?
-                  <img className='coloredBG' src={classWork[chosenClass][chosenPhase][chosenSpec].trinket2.img}></img> :
+                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                  <img className='coloredBG' src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].trinket2.img}></img> :
                   <img src={blankTrinket}></img>
               }
             </a>
