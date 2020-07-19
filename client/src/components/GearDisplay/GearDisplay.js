@@ -94,9 +94,9 @@ const GearDisplay = (props) => {
               }
             </a>
 
-            <a href="#" data-wowhead={doesClassWork ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand.link : ""}>
+              <a href="#" data-wowhead={doesClassWork && classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand.link : ""}>
               {
-                props.chosenPhase && props.chosenClass && props.chosenSpec ?
+                doesClassWork && classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand ?
                   <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand.img}></img> :
                   <img src={blankOffhand}></img>
               }
