@@ -6,12 +6,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
-/* .headLink {
-  width: 64px;
-  height: 64px;
-  background-image: url(https://wow.zamimg.com/images/wow/icons/large/inv_helmet_36.jpg);
-} */
 .main-wrapper {
   margin-top: 5%;
 }
@@ -44,32 +38,6 @@ body {
 .right-gear {
   flex-direction: column;
   width: 64px;
-}
-
-.radio-toolbar input[type="radio"]{
-  opacity: 0;
-  position: fixed;
-  width: 0;
-}
-
-.radio-toolbar label {
-  display: inline-block;
-  background-color: #ddd;
-  padding: 10px 20px;
-  font-family: sans-serif, Arial;
-  font-size: 16px;
-  border: 2px solid #444;
-  border-radius: 4px;
-}
-
-.radio-toolbar input[type="radio"]:checked + label {
-  background-color:#bfb;
-  /* border-color: #4c4; */
-  border: 2px solid #444
-}
-
-.radio-toolbar label:hover {
-  background-color: #dfd;
 }
 
 .doesClassWork {

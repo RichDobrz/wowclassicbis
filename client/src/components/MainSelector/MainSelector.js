@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import GearDisplay from "../GearDisplay/GearDisplay"
 import classWork from "../../wowhead/classData"
+import "./MainSelector.css"
 
 const MainSelector = () => {
 
