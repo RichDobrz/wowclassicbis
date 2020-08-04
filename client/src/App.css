@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 
+body, html {
+  height: 100%;
+}
+
+body {
+  background: #313639;
+}
 .App {
-  width: 50%;
-  margin-right: 25%;
-  margin-left: 25%;
-  background-image: url("./images/low_contrast_linen_@2X.png");
+  height: 100%;
 }

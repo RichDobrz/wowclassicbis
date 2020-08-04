@@ -17,8 +17,8 @@ const MainSelector = () => {
         }, [chosenClass])
       
     return (
-        <div>
-          <div>
+        <div className="mainSelectorContainer">
+          <div className="selectorRadios">
             <section>
     
               <form name="myPhase" className="radio-toolbar phaseChooser">

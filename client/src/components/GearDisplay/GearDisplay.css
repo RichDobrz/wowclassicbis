@@ -1,11 +1,12 @@
-body {
+/* body {
   background: #313639;
-}
+} */
 
 .gear-icons {
   display: flex;
   justify-content: center;
 }
+
 .main-wrapper {
   margin-top: 5%;
 }
