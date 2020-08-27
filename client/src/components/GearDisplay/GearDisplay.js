@@ -18,13 +18,11 @@ import blankOffhand from "../../images/UIoffhandslot.png"
 
 
 
-
 const GearDisplay = (props) => {
   const doesClassWork = props.chosenPhase && props.chosenClass && props.chosenSpec
 
   return (
     <div>
-
 
       <div className="main-wrapper">
 
@@ -97,7 +95,7 @@ const GearDisplay = (props) => {
               <a href="#" data-wowhead={doesClassWork && classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand ? classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand.link : ""}>
               {
                 doesClassWork && classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand ?
-                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand.img}></img> :
+                  <img src={classWork[props.chosenClass][props.chosenPhase][props.chosenSpec].offhand.img} id="offHandIcon"></img> :
                   <img src={blankOffhand}></img>
               }
             </a>

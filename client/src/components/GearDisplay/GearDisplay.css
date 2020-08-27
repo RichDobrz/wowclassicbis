@@ -1,7 +1,7 @@
 /* body {
   background: #313639;
 } */
-
+/* 
 .gear-icons {
   display: flex;
   justify-content: center;
@@ -44,6 +44,7 @@
 .doesClassWork {
   width: 100px;
 }
+
 .bottom-gear {
   display: flex;
   align-self: flex-end;
@@ -51,4 +52,4 @@
   height: 64px;
   margin-left: 3%;
   margin-right: 3%;
-}
+} */
